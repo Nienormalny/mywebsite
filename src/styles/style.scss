@@ -1,0 +1,163 @@
+@import './colors';
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+
+body {
+  background-color: $background-color;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 1px;
+  font-weight: 100;
+  padding: 25px;
+  color: white;
+  height: calc(100vh - 50px);
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=52844), auto;
+
+  h1 {
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  h2,
+  h3 {
+    margin: 0;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .dotted-border {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    & > span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+    .top {
+      background-image: linear-gradient(to right,white 50%, black 50%);
+      background-position: top;
+      background-size: 8px 2px;
+      background-repeat: repeat-x;
+    }
+    .right {
+      background-image: linear-gradient(white 50%, black 50%);
+      background-position: right;
+      background-size: 2px 8px;
+      background-repeat: repeat-y;
+    }
+    .bottom {
+      background-image: linear-gradient(to right,white 50%, black 50%);
+      background-position: bottom;
+      background-size: 8px 2px;
+      background-repeat: repeat-x;
+    }
+    .left {
+      background-image: linear-gradient(white 50%, black 50%);
+      background-position: left;
+      background-size: 2px 8px;
+      background-repeat: repeat-y;
+    }
+  }
+  .repo-box {
+    position: relative;
+    width: 200px;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    h2 {
+      text-align: center;
+    }
+    .description {
+      font-size: 14px;
+      // background-color: $light-background;
+      color: $orange;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      margin-bottom: 15px;
+      .top {
+        background-image: linear-gradient(to right,$orange 50%, black 50%);
+      }
+      .right {
+        background-image: linear-gradient($orange 50%, black 50%);
+      }
+      .bottom {
+        background-image: linear-gradient(to right,$orange 50%, black 50%);
+      }
+      .left {
+        background-image: linear-gradient($orange 50%, black 50%);
+      }
+    }
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  .start-date {
+    font-size: 14px;
+  }
+}
+.btn {
+  text-decoration: none;
+  // background-color: $btn-color;
+  cursor: pointer;
+  color: white;
+  padding: 8px 10px;
+  margin: 5px 0;
+  word-break: keep-all;
+  white-space: nowrap;
+  text-align: center;
+  min-width: 150px;
+  font-size: 14px;
+  // transition: all 0.3s ease;
+  position: relative;
+  &:hover {
+    // background-color: lighten($color: $btn-color, $amount: 10);
+    color: $green;
+    .top {
+      background-image: linear-gradient(to right,$green 50%, black 50%);
+    }
+    .right {
+      background-image: linear-gradient($green 50%, black 50%);
+    }
+    .bottom {
+      background-image: linear-gradient(to right,$green 50%, black 50%);
+    }
+    .left {
+      background-image: linear-gradient($green 50%, black 50%);
+    }
+  }
+  &.btn-secondary {
+    &:hover {
+      color: $btn-secondary-color;
+      .top {
+        background-image: linear-gradient(to right,$btn-secondary-color 50%, black 50%);
+      }
+      .right {
+        background-image: linear-gradient($btn-secondary-color 50%, black 50%);
+      }
+      .bottom {
+        background-image: linear-gradient(to right,$btn-secondary-color 50%, black 50%);
+      }
+      .left {
+        background-image: linear-gradient($btn-secondary-color 50%, black 50%);
+      }
+    }
+  }
+}
+.m-top-auto {
+  margin-top: auto;
+}
