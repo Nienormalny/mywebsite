@@ -2,11 +2,22 @@
 @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
 
-body {
-  background-color: $background-color;
-  font-family: 'Share Tech Mono', monospace;
+@keyframes blink {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
+
+* {
+  font-family: 'Share Tech Mono', monospace !important;
   letter-spacing: 1px;
   font-weight: 100;
+}
+body {
+  background-color: $background-color;
   padding: 25px;
   color: white;
   height: calc(100vh - 50px);
@@ -160,4 +171,66 @@ ul {
 }
 .m-top-auto {
   margin-top: auto;
+}
+#hello-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 50px);
+  .flex-box {
+    margin-top: 100px;
+    width: 640px;
+    height: 380px;
+    position: relative;
+    justify-content: left;
+    align-content: flex-start;
+    padding: 5px 0 5px 15px;
+  }
+  .input-box {
+    left: 15px;
+    color: $green;
+    margin: 0;
+  }
+}
+.standard-input {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  padding: 5px 10px;
+  position: relative;
+  z-index: 1;
+  outline: none;
+  &.disabled {
+    color: $silver;
+  }
+}
+.not-found {
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  color: $silver;
+  span {
+    color: $red;
+    max-width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
+.command-box {
+  width: 640px;
+  height: 380px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+}
+.pages {
+  li {
+    display: inline-block;
+    margin-right: 15px;
+    color: $secondary-color;
+    &:before {
+      content: '#';
+    }
+  }
 }
