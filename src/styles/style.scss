@@ -19,6 +19,7 @@
 body {
   background-color: $background-color;
   padding: 25px;
+  margin: 0;
   color: white;
   height: calc(100vh - 50px);
   cursor: url(http://www.rw-designer.com/cursor-extern.php?id=52844), auto;
@@ -174,23 +175,9 @@ ul {
 }
 #hello-page {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: calc(100vh - 50px);
-  .flex-box {
-    margin-top: 100px;
-    width: 640px;
-    height: 380px;
-    position: relative;
-    justify-content: left;
-    align-content: flex-start;
-    padding: 5px 0 5px 15px;
-  }
-  .input-box {
-    left: 15px;
-    color: $green;
-    margin: 0;
-  }
 }
 .standard-input {
   background-color: transparent;
@@ -231,6 +218,162 @@ ul {
     color: $secondary-color;
     &:before {
       content: '#';
+    }
+  }
+}
+#navigation {
+  width: 640px;
+  height: 380px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  background-color: $black-transparent;
+  padding: 5px 0 10px 10px;
+  transition: all 0.3s ease;
+  .input-box {
+    left: 15px;
+    color: $green;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  &.closed {
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    cursor: pointer;
+    z-index: 2;
+    &:after {
+      content: '>';
+      color: $green;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    .command-box {
+      width: 30px;
+      height: 30px;
+    }
+    transform: translate(0, 0);
+    .input-box {
+      display: none;
+    }
+  }
+  &:not(.closed) + .help {
+    left: 15px;
+  }
+  .close-btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 0;
+    top: -45px;
+    right: 0;
+    background-color: $black-transparent;
+    & > span {
+      display: block;
+      height: 2px;
+      width: 20px;
+      position: absolute;
+      background-color: $green;
+      top: 14px;
+      left: 5px;
+      &:first-of-type {
+        transform: rotate(-45deg);
+      }
+      &:last-child {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+.help {
+  top: 15px;
+  padding: 0;
+  cursor: pointer;
+  z-index: 2;
+  position: fixed;
+  top: 15px;
+  left: 60px;
+  color: $green;
+  transition: all 0.3s ease;
+  background-color: $black-transparent;
+  &.open {
+    padding: 10px;
+  }
+  &:not(.open) {
+    width: 30px;
+    height: 30px;
+    &:after {
+      content: '?';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
+  p:first-child {
+    margin-top: 0;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+.text-red {
+  color: $red;
+}
+.text-green {
+  color: $green;
+}
+#videos {
+  .flex-box {
+    flex-wrap: wrap;
+    .video {
+      position: relative;
+      margin: 10px;
+      width: calc(100% / 3 - 30px);
+      padding: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      transform: scale(1);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .video-details {
+      position: relative;
+      z-index: 1;
+      padding: 15px;
+      height: 200px;
+      .title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background-color: $black-transparent-light;
+        display: flex;
+        align-items: center;
+        h3 {
+          background-color: $black-transparent-light;
+          padding: 10px 0;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 0;
+      }
     }
   }
 }
