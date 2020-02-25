@@ -31,8 +31,20 @@ const Navigation = ({onSelect}) => {
                      _.map(pages, page => {
                         el.innerHTML += `<li>${page}</li>`
                     });
-                } else if (_.includes(pages, target.value.split('cd')[1].trim())) {
+                } else if (target.value.indexOf('cd') > -1 && _.includes(pages, target.value.split('cd')[1].trim())) {
                     onSelect(target.value.split('cd')[1].trim());
+                } else if (target.value === 'help') {
+                    el = document.createElement('div');
+                    el.classList.add('help-info');
+                    el.innerHTML = `
+                    <p>Commands:</p>
+                    <ul>
+                      <li>ls - to see available pages</li>
+                      <li>cd - for selecting pages</li>
+                    </ul>
+                    <p>To go in another page type <span className="text-red">"cd "</span> and available page from <span className="text-red">"ls"</span>.</p>
+                    <p>Example: <span className="text-red">cd Projects</span></p>
+                    `
                 } else {
                     el = document.createElement('p');
                     el.classList.add('not-found');

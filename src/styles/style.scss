@@ -21,12 +21,13 @@ body {
   padding: 25px;
   margin: 0;
   color: white;
-  height: calc(100vh - 50px);
+  // height: calc(100vh - 50px);
   cursor: url(http://www.rw-designer.com/cursor-extern.php?id=52844), auto;
 
   h1 {
     letter-spacing: 1px;
     text-align: center;
+    font-size: 2.5em;
   }
   h2,
   h3 {
@@ -237,6 +238,9 @@ ul {
     color: $green;
     margin: 0;
     overflow-x: hidden;
+    .help-info {
+      color: $secondary-color;
+    }
   }
   &.closed {
     top: 15px;
@@ -326,10 +330,16 @@ ul {
   }
 }
 .text-red {
-  color: $red;
+  color: $red !important;
 }
 .text-green {
-  color: $green;
+  color: $green !important;
+}
+.text-orange {
+  color: $orange !important;
+}
+.text-blue {
+  color: $secondary-color !important;
 }
 #videos {
   .flex-box {
@@ -338,6 +348,7 @@ ul {
       position: relative;
       margin: 10px;
       width: calc(100% / 3 - 30px);
+      max-width: 320px;
       padding: 5px;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -375,5 +386,43 @@ ul {
         z-index: 0;
       }
     }
+  }
+}
+#aboutme {
+  img {
+    width: 250px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  .flex-box {
+    position: relative;
+    width: 70%;
+    margin: auto;
+  }
+  b {
+    font-weight: 800;
+    color: $green;
+  }
+  h2 {
+    color: $secondary-color;
+  }
+  h3 {
+    margin-top: 15px;
+    color: $orange;
+  }
+  p {
+    text-align: center;
+  }
+  ul {
+    text-align: center;
+    li {
+      margin: 5px 0;
+    }
+  }
+  .description {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
   }
 }

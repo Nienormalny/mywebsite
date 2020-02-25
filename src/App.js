@@ -5,11 +5,13 @@ import HelloPage from './components/hellopage.component';
 import Navigation from './components/navigation.component';
 import classnames from 'classnames';
 import Videos from './components/videos.component';
+import AboutMe from './components/aboutme.component';
 
 function App() {
   const [pr, setPr] = useState(false);
   const [hp, setHp] = useState(true);
   const [vp, setVp] = useState(false);
+  const [ap, setAp] = useState(false);
   const [toggleHelp, setToggleHelp] = useState(false);
   const [reloadNav, setReloadNav] = useState(true);
 
@@ -32,18 +34,27 @@ function App() {
         if (page === 'Projects') {
           setHp(false);
           setVp(false);
+          setAp(false);
           setPr(true);
           setReloadNav(!reloadNav);
         } else if (page === 'Home') {
           setPr(false);
           setVp(false);
+          setAp(false);
           setHp(true);
           setReloadNav(!reloadNav);
         }
         else if (page === 'Videos') {
+          setPr(false);
+          setHp(false);
+          setAp(false);
+          setVp(true);
+          setReloadNav(!reloadNav);
+        } else if (page === 'About me') {
           setPr(false)
           setHp(false);
-          setVp(true);
+          setVp(false);
+          setAp(true);
           setReloadNav(!reloadNav);
         }
       }}/>}
@@ -65,6 +76,7 @@ function App() {
         </div>}
       </div>
       {vp && <Videos/>}
+      {ap && <AboutMe/>}
     </div>
   );
 }

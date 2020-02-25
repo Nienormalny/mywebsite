@@ -1,4 +1,5 @@
 export const baseCommands = [
     'ls',
-    'cd'
+    'cd',
+    'help'
 ];
