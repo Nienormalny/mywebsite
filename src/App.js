@@ -6,12 +6,14 @@ import Navigation from './components/navigation.component';
 import classnames from 'classnames';
 import Videos from './components/videos.component';
 import AboutMe from './components/aboutme.component';
+import MiniEditor from './components/minieditor.component';
 
 function App() {
   const [pr, setPr] = useState(false);
   const [hp, setHp] = useState(true);
   const [vp, setVp] = useState(false);
   const [ap, setAp] = useState(false);
+  const [me, setMe] = useState(false);
   const [toggleHelp, setToggleHelp] = useState(false);
   const [reloadNav, setReloadNav] = useState(true);
 
@@ -35,12 +37,14 @@ function App() {
           setHp(false);
           setVp(false);
           setAp(false);
+          setMe(false);
           setPr(true);
           setReloadNav(!reloadNav);
         } else if (page === 'Home') {
           setPr(false);
           setVp(false);
           setAp(false);
+          setMe(false);
           setHp(true);
           setReloadNav(!reloadNav);
         }
@@ -48,13 +52,22 @@ function App() {
           setPr(false);
           setHp(false);
           setAp(false);
+          setMe(false);
           setVp(true);
           setReloadNav(!reloadNav);
         } else if (page === 'About me') {
           setPr(false)
           setHp(false);
           setVp(false);
+          setMe(false);
           setAp(true);
+          setReloadNav(!reloadNav);
+        } else if (page === 'ed') {
+          setPr(false)
+          setHp(false);
+          setVp(false);
+          setAp(false);
+          setMe(true);
           setReloadNav(!reloadNav);
         }
       }}/>}
@@ -77,6 +90,7 @@ function App() {
       </div>
       {vp && <Videos/>}
       {ap && <AboutMe/>}
+      {me && <MiniEditor/>}
     </div>
   );
 }

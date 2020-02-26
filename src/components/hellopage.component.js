@@ -6,7 +6,7 @@ import Navigation from './navigation.component';
 const HelloPage = () => {
     return (
         <section id="hello-page">
-            <h1>Hello Friend...</h1>
+            <h1>H<span className="text-green">e</span>llo Frien<span className="text-green">d</span>...</h1>
         </section>
     );
 };

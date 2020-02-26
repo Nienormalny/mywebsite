@@ -1,5 +1,6 @@
 export const baseCommands = [
     'ls',
     'cd',
-    'help'
+    'help',
+    'ed' //To open mini editor
 ];
