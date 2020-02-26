@@ -20,7 +20,6 @@ const Navigation = ({onSelect}) => {
         if (e.key === 'Enter') {
             const fragment = document.createDocumentFragment();
             let el;
-            console.log(target.value.trim().indexOf('cdls'), target.value.trim())
 
             setInputsArray([...inputsArray, target.value]);
             if (_.includes(baseCommands, target.value.split(' ')[0])) {
@@ -33,6 +32,8 @@ const Navigation = ({onSelect}) => {
                     });
                 } else if (target.value.indexOf('cd') > -1 && _.includes(pages, target.value.split('cd')[1].trim())) {
                     onSelect(target.value.split('cd')[1].trim());
+                } else if (target.value === 'ed') {
+                    onSelect(target.value);
                 } else if (target.value === 'help') {
                     el = document.createElement('div');
                     el.classList.add('help-info');
