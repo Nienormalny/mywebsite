@@ -41,7 +41,6 @@ const Videos = () => {
                                     return <span>{tag}</span>
                                 })}
                             </div>
-                            
                         </div>
                     )
                 })}

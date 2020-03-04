@@ -7,6 +7,7 @@ import classnames from 'classnames';
 import Videos from './components/videos.component';
 import AboutMe from './components/aboutme.component';
 import MiniEditor from './components/minieditor.component';
+import Archive from './components/archive.component';
 
 function App() {
   const [pr, setPr] = useState(false);
@@ -14,6 +15,7 @@ function App() {
   const [vp, setVp] = useState(false);
   const [ap, setAp] = useState(false);
   const [me, setMe] = useState(false);
+  const [arp, setArp] = useState(false);
   const [toggleHelp, setToggleHelp] = useState(false);
   const [reloadNav, setReloadNav] = useState(true);
 
@@ -33,11 +35,13 @@ function App() {
       }}/>}
       {pr && <Projects />}
       {reloadNav && <Navigation onSelect={page => {
+        console.log(page, page.toLowerCase())
         if (page === 'Projects') {
           setHp(false);
           setVp(false);
           setAp(false);
           setMe(false);
+          setArp(false);
           setPr(true);
           setReloadNav(!reloadNav);
         } else if (page === 'Home') {
@@ -45,6 +49,7 @@ function App() {
           setVp(false);
           setAp(false);
           setMe(false);
+          setArp(false);
           setHp(true);
           setReloadNav(!reloadNav);
         }
@@ -53,6 +58,7 @@ function App() {
           setHp(false);
           setAp(false);
           setMe(false);
+          setArp(false);
           setVp(true);
           setReloadNav(!reloadNav);
         } else if (page === 'About me') {
@@ -60,6 +66,7 @@ function App() {
           setHp(false);
           setVp(false);
           setMe(false);
+          setArp(false);
           setAp(true);
           setReloadNav(!reloadNav);
         } else if (page === 'ed') {
@@ -67,7 +74,16 @@ function App() {
           setHp(false);
           setVp(false);
           setAp(false);
+          setArp(false);
           setMe(true);
+          setReloadNav(!reloadNav);
+        } else if (page === 'archive-x') {
+          setPr(false)
+          setHp(false);
+          setVp(false);
+          setAp(false);
+          setMe(false);
+          setArp(true);
           setReloadNav(!reloadNav);
         }
       }}/>}
@@ -91,6 +107,7 @@ function App() {
       {vp && <Videos/>}
       {ap && <AboutMe/>}
       {me && <MiniEditor/>}
+      {arp && <Archive/>}
     </div>
   );
 }
