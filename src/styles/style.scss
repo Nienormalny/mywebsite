@@ -429,7 +429,7 @@ body {
   position: relative;
   padding: 15px;
   &:not(.photos-box) {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 300px);
   }
   .videos,
   .photos {
@@ -441,7 +441,7 @@ body {
       flex-wrap: wrap;
       overflow-y: auto;
       overflow-x: hidden;
-      max-height: calc(100vh - 250px);
+      max-height: calc(100vh - 350px);
     }
     .video {
       width: calc(100% / 2 - 20px);
@@ -640,5 +640,35 @@ body {
   #preview {
     max-height: calc(100vh - 520px);
     overflow-y: auto;
+  }
+}
+#egg-counter {
+  position: fixed;
+  z-index: 2;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    padding: 0 5px;
+    margin: 5px 0;
+  }
+  .eggs {
+    display: flex;
+  }
+  .egg {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+  }
+}
+.checkmark {
+  &.checked {
+    color: $green;
   }
 }

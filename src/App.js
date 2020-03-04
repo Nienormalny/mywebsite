@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import * as _ from 'lodash';
 import './styles/style.scss';
 import Projects from './components/projects.component';
 import HelloPage from './components/hellopage.component';
@@ -18,6 +19,16 @@ function App() {
   const [arp, setArp] = useState(false);
   const [toggleHelp, setToggleHelp] = useState(false);
   const [reloadNav, setReloadNav] = useState(true);
+  const [eggs, setEggs] = useState({
+    'ed': {
+      title: 'Mini Editor',
+      checked: false
+    },
+    'archive-x': {
+      title: 'Archive X',
+      checked: false
+    }
+  });
 
   useEffect(() => {
     if (!reloadNav) {
@@ -77,6 +88,7 @@ function App() {
           setArp(false);
           setMe(true);
           setReloadNav(!reloadNav);
+          setEggs({...eggs, 'ed': {...eggs['ed'], checked: true}});
         } else if (page === 'archive-x') {
           setPr(false)
           setHp(false);
@@ -85,6 +97,7 @@ function App() {
           setMe(false);
           setArp(true);
           setReloadNav(!reloadNav);
+          setEggs({...eggs, 'archive-x': {...eggs['archive-x'], checked: true}});
         }
       }}/>}
       <div className={classnames('help', {open: toggleHelp})} onClick={() => setToggleHelp(!toggleHelp)}>
@@ -108,6 +121,24 @@ function App() {
       {ap && <AboutMe/>}
       {me && <MiniEditor/>}
       {arp && <Archive/>}
+      <div id="egg-counter">
+        <p>Find eggs</p>
+        <div class="eggs">
+          {_.map(eggs, (egg, key) => {
+            return (
+              <div className="egg" key={key}>
+                <div className="dotted-border">
+                  <span className="top"></span>
+                  <span className="right"></span>
+                  <span className="bottom"></span>
+                  <span className="left"></span>
+                </div>
+                <span className={classnames('checkmark', {checked: egg.checked})}>&#10004;</span>
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </div>
   );
 }
