@@ -13,38 +13,35 @@ const AboutMe = () => {
                 </div>
         	    <img src="/mypic.jpg" />
                 <div className="description">
-                    <h2>Krótka historia o mnie</h2>
+                    <h2>Short story about me</h2>
                     <p>
-                        Witam, mam na imię <b>Dawid</b>. Od lat zajmuję się programowaniem stron internetowych.
-                        Zanim jednak zacząłem pracę z kodem starałem się spełnić swoje marzenie o zostaniu piłkarzem.
-                        Jednak wszystko potoczyło się inaczej i tak zostałem web developerem...
+                        Hello, my name is <b>Dawid</b>. I have been programming websites for years. But before I started working with the code,
+                        I tried to fulfil my dreams of becoming a footballer. However, everything went diffrently and I become a web developer.
+                        Ihave always dealt with creativity, I was interested in animations, graphics, film editing or cre<span className="text-red">a</span>ting 3D graphics,
+                        My first approaches to animation appeared at the age of 12, when I met Flash Maker/Macromedia Flash.
+                        Then I had the first contact with programming in <b>Action Script 2</b>
                     </p>
                     <p>
-                        Zasze miałem doczynienia z kreatywnością, interesowały mnie <b>animacje</b>, <b>grafika</b>, <b>montaż filmów</b> czy <b>tworzenie grafik 3D</b>.
-                        Pierwsze podejścia do animacji pojawiły się w wieku 12 lat, kiedy to poznałem program <b>Flash Maker</b>/<b>Macromedia Flash</b>.
-                        Wówczas miałem pierwszą styczność z programowaniem akcji w <b>Action Script 2</b>.
+                        Over the years I have learned wonderful programs from Adobe such as <b>Photoshop</b>, <b>Flash</b> (Makromedia Flash), <b>Afte<b className="text-red">r</b> Effect</b>.
+                        By expanding my knowledge and learnig how to use the above mentioned programs I could create content for other people and share my <span className="text-red">c</span>reativity.
+                        Thereby inspire others. During this time I had the opportunity to work with interesting Polis<span className="text-red">h</span> Youtubers
+                        or create a social networking site in the form of a forum for many video makers.
+                        While I was actively involved in developing the "First project" I learned how to freely navigate the <b>WordPress</b> interface and also how to modify it.
+                        As an administrator of website/portal/forum I had the opportunity to learn about the difficulties that go hand in hand with coordinating team and what responsability this entails.
                     </p>
                     <p>
-                        Z biegiem lat poznałem wspaniałe programy od Adobe takie jak <b>Photoshop</b>, <b>Flash</b> (Macromedia Flash), <b>After Effect</b>.
-                        Zgłębiając swoją wiedzę i ucząc się obsługi wyżej wymienionych programów, mogłem tworzyć kontent dla innych ludzi
-                        i dzielić sie swoją kreatywnością. Tym samym inspirować innych. W przeciągu tego czasu miałem okazję współpracować z
-                        ciekawymi Polskimi Youtuberami czy tez stworzyć <b>portal społecznościowy</b> w formie forum dla wielu twórców video.
-                        Podczas gdy brałem czynny udział w rozwijaniu <b>"Pierwszego projektu"</b> nauczyłem sie swobodnie poruszać po interfejsie <b>WordPress</b> oraz jak go modyfikować.
-                        Jako administrator strony/portalu/forum miałem okazje poznać trudności jakie idą w parze z koordynowaniem innych użytkowników i jaka odpowiedzialność
-                        za tym idzie.
+                        Going to Germany I had no idea what awaited me, much less I didn't think that someday "creating webs<span className="text-red">i</span>tes"  could become my profession.
+                        Not knowing the <b>German language</b>, I signed up fot the course and finished it at <b>B2 level</b>.
+                        After that I tried my chance at a company that de<span className="text-red">v</span>elops a Web application. I was invited for an interview and I got a chance.
+                        I had 2 weeks to show my willingness with futher development, not only personal. So I took my time and started to learn <b className="text-blue">HTML</b>/<b>CSS</b>/<b className="text-orange">JS</b>.
+                        Sleepless nights opened the door to a new future for me!
                     </p>
                     <p>
-                        Wyjeżdżając do Niemiec nie miałem pojęcia co mnie czeka a tym bardziej nie sądziłem, że kiedyś "tworzenie stron" może sta się moim zawodem.
-                        Nie znając języka zapisałem sie na kurs Niemieckiego i ukończyłem go na poziomie B2. Po czym spróbowałem swoich sił w firmie, która rozwija aplikacje Webową.
-                        Zostałem zaproszony na rozmowe wstępną i dostałem szansę. Miałem 2 tygodnie na pokazanie moich chęci z dalszym rozwojem nie tylko osobistym.
-                        Tak więc poświeciłem swój czas i przystąpiłem do nauki <b className="text-blue">HTML</b>/<b>CSS</b>/<b className="text-orange">JS</b>. Nie przespane nocki otworzyły mi drzwi do nowej przyszłości!
+                        It was like lov<span className="text-red">e</span> at first sigh. At the time I wrote my first script I knew that this is what I would like to do for the rest of my life.
+                        I felt satisfied. Thus I began to delve into the subject of web development and continued my learnig, raising standards higher and higer every day.
                     </p>
-                    <p>
-                        To było jak miłość od pierwszego wejrzenia. W momencie gdy napisałem swój pierwszy skrypt wiedziałem, że to jest to co chciałbym robic do końca mojego życia.
-                        Czułem się spełniony. Tym samym zacząłem się zagłębiać w tematyke web developingu i kontynuowałem swoją naukę podnosząc z dnia na dzień coraz to wyżej poprzeczkę.
-                    </p>
-                    <h2>Na dzień dzisiejszy</h2>
-                    <h3>Co potrafię - Front-end:</h3>
+                    <h2>Today</h2>
+                    <h3>My Front<span className="text-red">-</span>end knowlage:</h3>
                     <ul>
                         <li>HTML5/Twig</li>
                         <li>CSS3/SASS/LESS</li>
@@ -54,13 +51,13 @@ const AboutMe = () => {
                         <li>BackboneJs</li>
                         <li>AframeJs</li>
                     </ul>
-                    <h3>Co potrafię - Back-end:</h3>
+                    <h3>My Back-end knowlage:</h3>
                     <ul>
                         <li>NodeJs</li>
-                        <li>ExpressJs</li>
+                        <li>E<span className="text-red">x</span>pressJs</li>
                         <li>MongoDb</li>
                     </ul>
-                    <h3>Co potrafię - inne przydatne:</h3>
+                    <h3>My other knowlage:</h3>
                     <ul>
                         <li>NPM</li>
                         <li>GIT</li>

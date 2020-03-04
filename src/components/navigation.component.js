@@ -46,10 +46,12 @@ const Navigation = ({onSelect}) => {
                     <p>To go in another page type <span className="text-red">"cd "</span> and available page from <span className="text-red">"ls"</span>.</p>
                     <p>Example: <span className="text-red">cd Projects</span></p>
                     `
+                } else if (target.value === 'archive-x') {
+                    onSelect(target.value);
                 } else {
                     el = document.createElement('p');
                     el.classList.add('not-found');
-                    el.innerHTML = `Command "<span>${target.value}"</span>" not found.`;
+                    el.innerHTML = `Command "<span>${target.value}</span>" not found.`;
                 }
             } else {
                 el = document.createElement('p');
@@ -78,7 +80,7 @@ const Navigation = ({onSelect}) => {
                     setToggle(!toggle);
                 }
             }}>
-            <div className="dotted-border">
+                <div className="dotted-border">
                     <span className="top"></span>
                     <span className="right"></span>
                     <span className="bottom"></span>
